@@ -1,0 +1,2 @@
+= antora-ui-stargate
+Antora UI bundle for Stargate documentation.
