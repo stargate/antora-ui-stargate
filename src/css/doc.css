@@ -23,7 +23,13 @@
 .doc h3,
 .doc h4,
 .doc h5,
-.doc h6 {
+.doc h6,
+.doc h1 a,
+.doc h2 a,
+.doc h3 a,
+.doc h4 a,
+.doc h5 a,
+.doc h6 a {
   color: var(--heading-font-color);
   font-weight: var(--heading-font-weight);
   hyphens: none;
@@ -117,6 +123,10 @@
 
 .doc a.unresolved {
   color: var(--link_unresolved-font-color);
+}
+
+.doc a.link {
+  color: var(--heading-font-color);
 }
 
 .doc i.fa {
@@ -249,6 +259,7 @@
 .doc .admonitionblock td.content {
   padding: 1rem 1rem 0.75rem;
   background: var(--admonition-background);
+  color: var(--admonition-color);
   width: 100%;
 }
 
