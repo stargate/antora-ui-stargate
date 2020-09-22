@@ -263,6 +263,10 @@
   width: 100%;
 }
 
+.doc .admonitionblock pre:not(.highlight) {
+  background: var(--admonition-background);
+}
+
 .doc .admonitionblock .icon {
   position: absolute;
   top: 0;
