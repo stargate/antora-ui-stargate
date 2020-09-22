@@ -132,11 +132,42 @@ html.is-clipped--nav {
 
 .nav-menu > .nav-list {
   margin-bottom: 0.5rem;
+  margin-left: 0;
 }
 
 .nav-item {
   list-style: none;
   margin-top: 0.5em;
+}
+
+.nav-item.toggler > a,
+.nav-item.toggler > button,
+.nav-item.toggler > span {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.nav-item.toggler > a:hover,
+.nav-item.is-current-page > a,
+.nav-item.toggler > button:hover,
+.nav-item.is-current-page > button,
+.nav-item.toggler > span:hover,
+.nav-item.is-current-page > span {
+  color: #555dc0;
+}
+
+.nav-item span,
+.nav-item a,
+.nav-item button {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #6a7086;
 }
 
 /* adds some breathing room below a nested list */
@@ -155,19 +186,18 @@ html.is-clipped--nav {
 }
 
 .nav-item-toggle {
-  background: transparent url(../img/caret.svg) no-repeat center / 50%;
+  background-color: transparent;
   border: none;
   outline: none;
   line-height: inherit;
-  position: absolute;
+  float: right;
   height: calc(var(--nav-line-height) * 1em);
   width: calc(var(--nav-line-height) * 1em);
-  margin-top: -0.05em;
-  margin-left: calc(var(--nav-line-height) * -1em);
+  transform: rotate(-90deg);
 }
 
 .nav-item.is-active > .nav-item-toggle {
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 }
 
 .is-current-page > .nav-link,
