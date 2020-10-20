@@ -16,8 +16,8 @@
     display: flex;
   }
 
-  main > .content > .content-inner {
-    padding-top: 3rem;
+  aside.toc.embedded {
+    display: none;
   }
 
   aside.toc.embedded {
@@ -25,6 +25,12 @@
   }
 
   aside.toc.sidebar {
-    flex: 1;
+    flex: 0 0 var(--toc-width);
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  aside.toc.sidebar {
+    flex-basis: var(--toc-width--widescreen);
   }
 }

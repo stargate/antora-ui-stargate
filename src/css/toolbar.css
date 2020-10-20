@@ -1,21 +1,14 @@
 .toolbar {
   color: var(--toolbar-font-color);
   align-items: center;
+  background-color: var(--toolbar-background);
   display: flex;
   font-size: calc(15 / var(--rem-base) * 1rem);
   height: var(--toolbar-height);
   justify-content: flex-start;
+  position: sticky;
+  top: var(--navbar-height);
   z-index: var(--z-index-toolbar);
-  margin: var(--doc-margin);
-  max-width: var(--doc-max-width);
-  padding-right: 1rem;
-}
-
-@media screen and (min-width: 1024px) {
-  .toolbar {
-    margin: var(--doc-margin--desktop);
-    max-width: var(--doc-max-width--desktop);
-  }
 }
 
 .toolbar a {
