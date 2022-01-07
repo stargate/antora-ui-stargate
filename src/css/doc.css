@@ -1,3 +1,4 @@
+.doc {
   font-size: var(--doc-font-size);
   hyphens: auto;
   line-height: var(--doc-line-height);
