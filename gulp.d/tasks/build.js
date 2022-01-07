@@ -99,9 +99,6 @@ module.exports = (src, dest, preview) => () => {
       .pipe(postcss((file) => ({ plugins: postcssPlugins, options: { file } }))),
     vfs.src('font/*.{ttf,woff*(2)}', opts),
     vfs.src('img/**/*.{gif,ico,jpg,png,svg}', opts).pipe(
-      //preview
-      //  ? through()
-      //  : imagemin(
          imagemin(
           [
             imagemin.gifsicle(),
@@ -109,12 +106,9 @@ module.exports = (src, dest, preview) => () => {
             imagemin.optipng(),
             imagemin.svgo({
               plugins: [
-        //        { cleanupIDs: { preservePrefixes: ['symbol-', 'view-'] } },
                 { removeViewBox: false },
-        //        { removeDesc: false },
               ],
             }),
-        //  ].reduce((accum, it) => (it ? accum.concat(it) : accum), [])
         ])
     ),
     vfs.src('helpers/*.js', opts),
