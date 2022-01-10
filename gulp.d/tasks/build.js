@@ -98,18 +98,19 @@ module.exports = (src, dest, preview) => () => {
       .src('css/site.css', { ...opts, sourcemaps })
       .pipe(postcss((file) => ({ plugins: postcssPlugins, options: { file } }))),
     vfs.src('font/*.{ttf,woff*(2)}', opts),
-    vfs
-      .src('img/**/*.{gif,ico,jpg,png,svg}', opts)
-      .pipe(
-        imagemin(
-          [
-            imagemin.gifsicle(),
-            imagemin.jpegtran(),
-            imagemin.optipng(),
-            imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
-          ].reduce((accum, it) => (it ? accum.concat(it) : accum), [])
-        )
-      ),
+    vfs.src('img/**/*.{gif,ico,jpg,png,svg}', opts).pipe(
+      imagemin(
+        [
+          imagemin.gifsicle(),
+          imagemin.jpegtran(),
+          imagemin.optipng(),
+          imagemin.svgo({
+            plugins: [
+              { removeViewBox: false },
+            ],
+          }),
+        ])
+    ),
     vfs.src('helpers/*.js', opts),
     vfs.src('layouts/*.hbs', opts),
     vfs.src('partials/*.hbs', opts)
