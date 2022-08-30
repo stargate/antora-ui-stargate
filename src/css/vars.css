@@ -143,8 +143,8 @@
   --admonition-background: var(--color-near-black);
   --admonition-color: var(--color-white);
   --admonition-label-font-weight: var(--body-font-weight-bold);
-  --caption-font-color: var(--color-white);
-  /* --caption-font-color: var(--color-navy-blue); */
+  /* --caption-font-color: var(--color-white); */
+  --caption-font-color: var(--color-navy-blue);
   --caption-font-weight: var(--body-font-weight-bold);
   --code-background: var(--panel-background);
   --code-font-color: var(--body-font-color);
