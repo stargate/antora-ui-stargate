@@ -32,7 +32,7 @@ If you want to simply use the UI for your Antora-generated site, add the followi
 ----
 ui:
   bundle:
-    url: https://github.com/stargate/antora-ui-stargate/releases/download/v0.10/ui-bundle.zip
+    url: https://github.com/stargate/antora-ui-stargate/releases/latest/download/ui-bundle.zip
 ----
 
 Read on to learn how to customize the default UI for your own documentation.
